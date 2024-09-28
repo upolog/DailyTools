@@ -1,0 +1,4 @@
+##For Linux
+for ip in $(seq 1 254); do ping -c 1 10.10.10.$ip -o ConnectTimeout=5; [ $? -eq 0 ] && echo "10.10.10.$ip UP" || : ; done
+## For Mac
+for ip in $(seq 1 254); do ping -c 1 10.10.10.$ip -t 5; [ $? -eq 0 ] && echo "10.10.10.$ip UP" || : ; done
